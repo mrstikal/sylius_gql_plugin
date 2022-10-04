@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: BitBag\SyliusGraphqlPlugin
+        psr4_prefix: BitBag\SyliusGraphqlPlugin

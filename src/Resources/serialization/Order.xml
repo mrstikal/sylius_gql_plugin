@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+
+<!--
+This file was created by developers working at BitBag
+Do you need more information about us and what we do? Visit our https://bitbag.io website!
+We are hiring developers from all over the world. Join us and start your new, exciting adventure and become part of us: https://bitbag.io/career
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="%sylius.model.order.class%">
+        <attribute name="id">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+            <group>shop:order:read</group>
+        </attribute>
+
+        <attribute name="number">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+            <group>shop:order:read</group>
+        </attribute>
+
+        <attribute name="currencyCode">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+        </attribute>
+
+        <attribute name="channel">
+            <group>admin:order:read</group>
+        </attribute>
+
+        <attribute name="customer">
+            <group>admin:order:read</group>
+        </attribute>
+
+        <attribute name="payments">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="shipments">
+            <group>shop:order:account:read</group>
+            <group>shop:cart:read</group>
+            <group>admin:order:read</group>
+        </attribute>
+
+        <attribute name="promotions">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="promotionCoupon">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="checkoutState">
+            <group>shop:order:account:read</group>
+            <group>shop:cart:read</group>
+            <group>admin:order:read</group>
+        </attribute>
+
+        <attribute name="state">
+            <group>admin:order:read</group>
+        </attribute>
+
+        <attribute name="paymentState">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+        </attribute>
+
+        <attribute name="shippingState">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+        </attribute>
+
+        <attribute name="total">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="orderPromotionTotal">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="tokenValue">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+            <group>shop:order:read</group>
+        </attribute>
+
+        <attribute name="items">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="notes">
+            <group>admin:order:read</group>
+        </attribute>
+
+        <attribute name="itemsTotal">
+            <group>shop:cart:read</group>
+            <group>shop:order:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="taxTotal">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="localeCode">
+            <group>admin:cart:update</group>
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="shippingTotal">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="shippingAddress">
+            <group>admin:address:read</group>
+            <group>admin:order:read</group>
+
+            <group>shop:address:read</group>
+            <group>shop:address:update</group>
+            <group>shop:cart:address</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="billingAddress">
+            <group>admin:address:read</group>
+            <group>admin:order:read</group>
+
+            <group>shop:address:read</group>
+            <group>shop:address:update</group>
+            <group>shop:cart:address</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+
+        <attribute name="createdAt">
+            <group>admin:order:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:cart:address</group>
+            <group>shop:order:account:read</group>
+        </attribute>
+    </class>
+</serializer>

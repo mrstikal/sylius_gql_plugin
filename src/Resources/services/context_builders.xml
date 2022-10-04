@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+This file was created by developers working at BitBag
+Do you need more information about us and what we do? Visit our https://bitbag.io website!
+We are hiring developers from all over the world. Join us and start your new, exciting adventure and become part of us: https://bitbag.io/career
+-->
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+    <services>
+        <defaults autowire="false" autoconfigure="false" public="false" />
+
+        <service
+            id="sylius_api.serializer_context_builder.graphql.channel"
+            class="BitBag\SyliusGraphqlPlugin\SerializerContextBuilder\GraphQL\ChannelContextBuilder"
+            decorates="api_platform.graphql.serializer.context_builder"
+            decoration-priority="64"
+        >
+            <argument type="service" id="sylius_api.serializer_context_builder.graphql.channel.inner" />
+            <argument type="service" id="sylius.context.channel" />
+        </service>
+
+        <service
+            id="sylius_api.serializer_context_builder.graphql.locale"
+            class="BitBag\SyliusGraphqlPlugin\SerializerContextBuilder\GraphQL\LocaleContextBuilder"
+            decorates="api_platform.graphql.serializer.context_builder"
+            decoration-priority="64"
+        >
+            <argument type="service" id="sylius_api.serializer_context_builder.graphql.locale.inner" />
+            <argument type="service" id="sylius.context.locale" />
+        </service>
+
+        <service
+            id="sylius_api.serializer_context_builder.graphql.http_request_method_type"
+            class="BitBag\SyliusGraphqlPlugin\SerializerContextBuilder\GraphQL\HttpRequestMethodTypeContextBuilder"
+            decorates="api_platform.graphql.serializer.context_builder"
+            decoration-priority="64"
+        >
+            <argument
+                type="service"
+                id="sylius_api.serializer_context_builder.graphql.http_request_method_type.inner"
+            />
+            <argument type="service" id="api_platform.metadata.resource.metadata_factory.operation" />
+        </service>
+    </services>
+</container>

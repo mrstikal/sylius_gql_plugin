@@ -1,0 +1,13 @@
+sylius_test_plugin_main:
+    path: /test/main
+    controller: FrameworkBundle:Template:template
+    defaults:
+        template: "@SyliusTestPlugin/main.html.twig"
+
+_profiler:
+    resource: "@WebProfilerBundle/Resources/config/routing/profiler.xml"
+    prefix: /_profiler
+
+_wdt:
+    resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
+    prefix: /_wdt

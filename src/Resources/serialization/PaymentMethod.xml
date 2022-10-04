@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<!--
+This file was created by developers working at BitBag
+Do you need more information about us and what we do? Visit our https://bitbag.io website!
+We are hiring developers from all over the world. Join us and start your new, exciting adventure and become part of us: https://bitbag.io/career
+-->
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\PaymentMethod">
+        <attribute name="id">
+            <group>admin:payment_method:read</group>
+            <group>shop:payment_method:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>admin:payment:read</group>
+            <group>admin:payment_method:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:account:read</group>
+            <group>shop:payment:read</group>
+            <group>shop:payment_method:read</group>
+        </attribute>
+        <attribute name="code">
+            <group>admin:payment_method:read</group>
+            <group>shop:payment_method:read</group>
+        </attribute>
+        <attribute name="translations">
+            <group>admin:payment_method:read</group>
+            <group>shop:payment_method:read</group>
+        </attribute>
+    </class>
+</serializer>
