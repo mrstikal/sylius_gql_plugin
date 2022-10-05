@@ -408,7 +408,7 @@ We are hiring developers from all over the world. Join us and start your new, ex
 
             <itemOperation name="get_configuration">
                 <attribute name="method">GET</attribute>
-                <attribute name="controller">sylius.api.get_configuration_action</attribute>
+                <attribute name="controller">Sylius\Bundle\ApiBundle\Controller\Payment\GetPaymentConfiguration" public="true</attribute>
                 <attribute name="path">/shop/orders/{tokenValue}/payments/{paymentId}/configuration</attribute>
                 <attribute name="openapi_context">
                     <attribute name="summary">Retrieve payment method configuration</attribute>
@@ -519,7 +519,7 @@ We are hiring developers from all over the world. Join us and start your new, ex
                 <attribute name="method">PATCH</attribute>
                 <attribute name="path">/shop/orders/{tokenValue}/apply-coupon</attribute>
                 <attribute name="messenger">input</attribute>
-                <attribute name="input">Sylius\Bundle\ApiBundle\Command\Cart\ApplyCouponToCart</attribute>
+                <attribute name="input">Sylius\Bundle\ApiBundle\CommandHandler\Checkout\UpdateCartHandler</attribute>
                 <attribute name="denormalization_context">
                     <attribute name="groups">shop:cart:apply_coupon</attribute>
                 </attribute>

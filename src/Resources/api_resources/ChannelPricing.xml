@@ -37,6 +37,6 @@ We are hiring developers from all over the world. Join us and start your new, ex
 
         <property name="id" writable="false" readable="true" identifier="true" />
         <property name="price" writable="false" readable="true" />
-        <property name="originalPrice" writable="false" readable="true" />
+        <property name="originalUnitPrice" writable="false" readable="true" />
     </resource>
 </resources>

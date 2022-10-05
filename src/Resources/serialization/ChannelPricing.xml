@@ -14,7 +14,7 @@ We are hiring developers from all over the world. Join us and start your new, ex
         <attribute name="price">
             <group>shop:channel_pricing:read</group>
         </attribute>
-        <attribute name="originalPrice">
+        <attribute name="originalUnitPrice">
             <group>shop:channel_pricing:read</group>
         </attribute>
         <attribute name="channelCode">
